@@ -1,4 +1,4 @@
-# My Random Notes
+# Anubodh
 
 This repository contains my Random notes on various topics, including ASIC design, coding, and other areas of interest. 
 
@@ -13,18 +13,6 @@ This repository is organized by topic. You'll find notes, code snippets, and res
 *   ASIC Design
 *   Coding (Python, C++, etc.)
 *   others
-
-## How to Use
-
-Feel free to browse the notes and resources. If you find anything helpful or have suggestions, please let me know!
-
-## Contributing
-
-While these are primarily my personal notes, I welcome contributions, suggestions, and feedback. If you have something to add or improve, please submit a pull request.
-
-## Contact
-
-You can reach me through [Your preferred contact method, e.g., email or GitHub profile]
 
 ## Acknowledgements
 
