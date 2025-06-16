@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///config/content" added="2025-06-15T23:12:51.320617Z" modified="2025-06-15T23:12:51.320622Z" visited="2025-06-15T23:12:51.320618Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="obsidian" exec="&apos;obsidian %u&apos;" modified="2025-06-15T23:12:51.320619Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/content/asic" added="2025-06-16T00:09:14.687829Z" modified="2025-06-16T00:29:14.003147Z" visited="2025-06-16T00:09:14.687830Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="obsidian" exec="&apos;obsidian %u&apos;" modified="2025-06-16T00:29:14.003143Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
