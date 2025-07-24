@@ -1,5 +1,8 @@
 ---
 title: Cache Coherency
+description: A detailed explanation of Cache Coherency in multi-core systems, including protocols like MESI, MOESI, and implementation mechanisms like snooping and directory-based.
+date: 2025-07-23
+tags: ["VLSI", "Architecture", "CPU", "GPU", "Cache", "Memory Hierarchy"]
 ---
 In a multi-core system ([[CPU]], [[GPU]]) where processors share memory but have private caches, [[Cache Coherency]] is the mechanism that ensures all cores have a consistent and correct view of the shared data. It prevents data corruption that occurs when one core modifies data in its local cache while others use an old, stale version.
 
@@ -36,3 +39,11 @@ stateDiagram-v2
 
     M --> S: Remote Read (snooped, write-back)
     M --> I: Invalidate received (write-back)
+```
+
+## Further Reading
+
+*   **Computer Architecture: A Quantitative Approach** by John L. Hennessy & David A. Patterson
+*   **Computer Organization and Design** by David A. Patterson & John L. Hennessy
+*   [Wikipedia - Cache Coherence](https://en.wikipedia.org/wiki/Cache_coherence)
+*   [GeeksforGeeks - Cache Coherence Protocols](https://www.geeksforgeeks.org/cache-coherence-protocols/)

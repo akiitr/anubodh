@@ -80,15 +80,16 @@ Global Routing
 GPU
 Halo
 Handshake Protocol
-Hard Blockage
 HDL
 Hierarchical Synthesis
+High-Fanout Net Synthesis (HFNS)
 Hold
 H-Tree
 Incremental Synthesis
 index
 Intel
 I-O Specification
+In-rush Current
 IP Integration
 IR Drop
 Isolation Cells
@@ -122,10 +123,10 @@ Min Period
 Modem
 MPW
 MSCTS
-Multicycle Paths
 Multi-driven Nets
 Multi-voltage Design
 Multi-Vt Cells
+Multicycle Paths
 Netlist Input
 Noise
 Open and Short Faults
@@ -202,11 +203,11 @@ SystemVerilog
 Tape Out & Manufacturing
 Technology Mapping
 Testbench
-Test Coverage
 Test Techniques
-Timing-Driven Routing
+Test Coverage
 Timing ECO
 Timing Paths
+Timing-Driven Routing
 Top-down Synthesis
 Transition Faults
 Transition

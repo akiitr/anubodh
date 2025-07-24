@@ -5,26 +5,26 @@ title: _ASIC Design Flow
 # ASIC Chip Design Flow: A Comprehensive Guide
 
 ### Table of Contents
-* [[Chip Specification|1. Chip Specification]]
+* [[Chip Specification]]
 * [[RTL Design|2. RTL Design]]
 * [[Functional Verification|3. Functional Verification]]
 * [[Synthesis|4. Synthesis]]
-* [[DFT|5. Design for Test (DFT)]]
+* [[Design for Test (DFT)|5. Design for Test (DFT)]]
 * [[Physical Design|6. Physical Design (Backend)]]
     * [[Pre-Placement & Sanity Checks|6.1. Pre-Placement & Sanity Checks]]
-    * [[Floorplanning & Power Planning|6.2. Floorplanning & Power Planning]]
-    * [[Placement|6.3. Placement]]
-    * [[CTS |6.4. Clock Tree Synthesis (CTS)]]
+    * [[Floorplanning & Power Planning]]
+    * [[Placement]]
+    * [[Clock Tree Synthesis (CTS)|CTS]]
     * [[Routing |6.5. Routing]]
 * [[Sign Off|7. Sign Off]]
     * [[STA|7.1. Static Timing Analysis (STA)]]
-    * [[Power Signoff|7.2. Power Signoff]]
-    * [[Physical Verification|7.3. Physical Verification]]
-    * [[ECO |7.4. ECO (Engineering Change Order)]]
+    * - [[Power Signoff]]
+    * [[Physical Verification]]
+    * [[Engineering Change Order (ECO) in VLSI|7.4. ECO (Engineering Change Order)]]
 * [[Tape Out & Manufacturing|8. Tape Out & Manufacturing]]
 * [[Post-Silicon Validation|9. Post-Silicon Validation]]
-* [[Recommended Resources|10. Recommended Resources]]
-* [[Key File Formats|11. Key File Formats]]
+* [[Recommended Resources]]
+* [[Key File Formats]]
 * [[Key EDA Tools|12. Key EDA Tools]]
 * [[Frontend Interview Questions|13. Frontend Interview Questions]]
 * [[Backend Interview Questions|14. Backend Interview Questions]]
@@ -61,13 +61,13 @@ graph TD
 - [[Cache Coherency]]
 - [[Pipeline Design]]
 - [[Clock Frequency]]
-- [[PPA|PPA (Power, Performance, Area)]]
+    - [[PPA]]
 - [[Cost Target]]
 - [[I-O Specification]]
 - [[PCIe]]
-- [[DDR]]
+- [[DDR (Double Data Rate) SDRAM|DDR]]
 - [[Modem]]
-- [[CPU]]
+- [[Central Processing Unit (CPU)|CPU]]
 - [[GPU]]
  
 ---
@@ -77,32 +77,34 @@ graph TD
     - [[Verilog]]
     - [[VHDL]]
     - [[SystemVerilog]]
-    - [[FSM|Finite State Machines (FSM)]]
+    - [[Finite State Machines (FSM)|FSM]]
     - [[Data Path Design]]
     - [[Control Logic]]
     - [[Combinational Logic]]
+    - [[Digital Logic in VLSI|Digital Logic]]
     - [[Sequential Logic]]
     - [[Parameterization]]
     - [[IP Integration]]
     - [[Synthesizable vs Non-synthesizable constructs]]
-    - [[Blocking vs Non-blocking assignments]]
+    - [[Blocking vs Non-blocking Assignments|Blocking vs Non-blocking assignments]]
     - [[Latch Inference]]
-- **[[CDC|Clock Domain Crossing (CDC)]]**
+- **[[Clock Domain Crossing (CDC)|Clock Domain Crossing (CDC)]]**
     - [[Metastability]]
     - [[Synchronizers]]
     - [[Handshake Protocol]]
     - [[Asynchronous FIFOs]]
-- **[[Reset Strategy]]**
+    - [[Reset Strategy]]
     - [[Synchronous Reset]]
-    - [[Asynchronous Reset]]
+    - [[Asynchronous Reset in VLSI|Asynchronous Reset]]
     - [[Reset Synchronizer]]
 - **[[Low Power Design]]**
     - [[UPF|UPF (Unified Power Format)]]
     - [[Power Domains]]
-    - [[Clock Gating]]
+    - [[Clock Gating|Clock Gating]]
     - [[Operand Isolation]]
-    - [[Power Gating]]
+    - [[Power Gating | Power Gating Switches, Control & Sequencing]]
     - [[Multi-voltage Design]]
+    - [[Retention Cells]]
 - **[[Linting]]**
 
 ---
@@ -114,7 +116,7 @@ graph TD
     - [[Code Coverage]]
     - [[Functional Coverage]]
     - [[Assertion Coverage]]
-- **[[Assertions]]**
+- **[[Assertions in VLSI|Assertions]]**
     - [[SVA|SystemVerilog Assertions (SVA)]]
 - **[[Verification Methodologies]]**
   - [[UVM|UVM (Universal Verification Methodology)]]
@@ -122,17 +124,19 @@ graph TD
       - [[UVM Driver]]
       - [[UVM Monitor]]
       - [[UVM Sequencer]]
+      - [[UVM Sequencer]]
       - [[UVM Agent]]
+      - [[UVM Scoreboard]]
       - [[UVM Scoreboard]]    
   - [[OVM|UVM (Open Verification Methodology)]]
-- **[[Advance Verification]]**
+- **[[Advanced Verification in VLSI|Advance Verification]]**
     - [[Formal Verification]]
     - [[Emulation & Prototyping & FPGA]]
 - **[[Test Techniques]]**
     - [[Directed Testing]]
-    - [[Constrained Random Verification]]
+    - [[Constrained Random Verification (CRV)|Constrained Random Verification]]
 - **[[Low Power Verification]]**
-  - [[CLP | UPF, CPF-based Verification]]
+  - [[Conformal Low Power (CLP) Checks|CLP]]
   - [[PAFV | Power-aware Simulation]]
   - [[LEC|Logical Equivalence Checking (LEC)]]
 ---
@@ -146,9 +150,9 @@ graph TD
     - [[Logic Optimization]]
     - [[Technology Mapping]]
     - [[Register Retiming]]
-    - [[Clock Gating| Clock Gating Insertion]]
-    - [[WLM|Wire Load Models (WLM)]]
-- [[Physical Synthesis | Physical Guidance, Placement-Driven Synthesis]]
+    - [[Clock Gating|Clock Gating Insertion]]
+    - [[WLM]]
+- [[Physical Synthesis]]
 - [[Hierarchical Synthesis]]
   - [[Bottom-up Synthesis]]
   - [[Top-down Synthesis]]
@@ -176,9 +180,11 @@ graph TD
 - [[Scan Insertion]]
   - [[Scan Chains]]
   - [[Scan Compression]]
-- [[ATPG|ATPG (Automatic Test Pattern Generation)]]
+  - [[Scan Chains]]
+  - [[Scan Compression]]
+- [[Automatic Test Pattern Generation (ATPG)|ATPG (Automatic Test Pattern Generation)]]
 - [[Test Coverage]]
-- **[[BIST|BIST (Built-In Self-Test)]]**
+- **[[Built-In Self-Test (BIST)|BIST (Built-In Self-Test)]]**
     - [[LBIST|Logic BIST (LBIST)]]
     - [[MBIST|Memory BIST (MBIST)]]
 - [[JTAG|Boundary Scan (JTAG)]]
@@ -190,22 +196,23 @@ graph TD
 ### 6.1. [[Pre-Placement & Sanity Checks]]
 - [[Netlist Input]]
 - **[[Sanity Checks]]**
-    - [[Floating Nets and Pins]]
+    - [[Floating Nets and Pins in VLSI|Floating Nets and Pins]]
     - [[Multi-driven Nets]]
-    - [[Combinational Loops]]
+    - [[Combinational Loops|combinational loop]] in [[Digital Circuits|digital circuit]] design
     - [[Library Consistency]]
     - [[SDC Checks]]
+    - [[DRV Fixing in VLSI|DRV Fixing]]
 - [[DFT Insertion]]
 
 ### 6.2. [[Floorplanning & Power Planning]]
 - [[Partitioning]]
-- [[Die Size Estimation]]
-- [[Core Utilization]]
-- [[Aspect Ratio]]
+- [[Die Size Estimation in VLSI|Die Size Estimation]]
+- [[Core Utilization in VLSI|Core Utilization]]
+- [[Aspect Ratio in VLSI Physical Design|Aspect Ratio]]
 - [[Macro Placement]]
-- [[Flylines| Flylines For Macro Placement]]
+- [[Flylines]]
 - [[Pin Assignment]]
-- **[[Power Grid|Power Grid Synthesis (PGS)]]**
+- **[[Power Grid]]**
     - [[Power Mesh]]
     - [[Power Rings]]
     - [[Power Rails]]
@@ -216,7 +223,7 @@ graph TD
     - [[Partial Blockage]]
     - [[Halo | Halo,Keep Out Margins]]
 - **[[Files]]**
-    - [[DEF|DEF (Design Exchange Format)]]
+    - [[Design Exchange Format (DEF)|DEF]]
     - [[LEF|LEF (Library Exchange Format)]]
 
 ### 6.3. [[Placement]]
@@ -228,12 +235,12 @@ graph TD
 - [[Congestion Analysis]]
 - [[Cell Density]]
 - [[Legalization]]
-- [[HFNS|High-Fanout Net Synthesis (HFNS)]]
+- [[High-Fanout Net Synthesis (HFNS)]]
 - [[Scan Chain Reordering]]
 - **[[Physical-Only Cells]]**
     - [[Tap Cells]]
     - [[Endcap Cells]]
-    - [[Decaps|Decoupling Capacitors (Decaps)]]
+    - [[Decaps in VLSI|Decoupling Capacitors (Decaps)]]
     - [[Tie Cells]]
 
 ### 6.4. [[CTS|Clock Tree Synthesis (CTS)]]
@@ -241,15 +248,15 @@ graph TD
 - [[Insertion Delay]]
 - [[Clock Latency]]
 - [[Clock Uncerainity | Clock Uncertainty, Clock Jitter]]
-- [[Useful Skew |Useful Skew, CCD (Concurrent Clock and Data Optimization)]]
-- [[NDR|Non-Default Rules (NDR)]]
-- [[Clock Shielding]]
-- [[Clock Gating]]
+- [[Useful Skew]]
+    - [[NDR]]
+- [[Clock Shielding in VLSI|Clock Shielding]]
+- [[Clock Gating|Clock Gating]]
 - [[Clock Buffers and Inverters]]
 - **[[Clock Tree Architectures]]**
     - [[H-Tree]]
-    - [[Conventional CTS]]
-    - [[Clock Mesh]]
+    - [[Conventional Clock Tree Synthesis (CTS)|Conventional CTS]]
+        - [[Clock Mesh]]
     - [[MSCTS]]
 
 ### 6.5. [[Routing]]
@@ -258,8 +265,8 @@ graph TD
 - **[[Routing Optimizations]]**
     - [[Timing-Driven Routing]]
     - [[Signal Integrity]]
-    - [[Crosstalk]]
-    - [[Antenna Effect]]
+    - [[Crosstalk in VLSI|Crosstalk]]
+    - [[Antenna Effect in VLSI|Antenna Effect]]
 - [[Metal Fill]]
 
 ---
@@ -286,12 +293,13 @@ graph TD
   - [[report_delay_calculation]]
   - [[report_noise]]
 - **[[Constraint Verification]]**
-  - [[check_timing]]
+  - [[check_timing Command in STA|check_timing]]
   - [[report_constraint]]
   - [[report_exceptions]]
   - [[report_annotated_parasitics]]
   - [[report_analysis_coverage]]
   - [[Linking Checks]]
+  - [[Unclocked Flops]]
   - [[Unclocked Flops]]
   - [[Unconstrained Endpoints]]
 - **[[Timing Analysis]]**
@@ -302,50 +310,51 @@ graph TD
     - [[Clock Types | Clock Type, Generated, Virtual etc.]]
     - [[Clock Insertion Delay]]
     - [[CDC| Clock Domain Crossing, Clock Muxing]]
-  - [[Timing Paths]]
+  - [[Timing Paths|Timing Paths]]
     - [[Data and clock Path]]
     - [[Launch and Capture Path]]
     - [[Timing Paths | reg2reg, in2reg, reg2out, in2out]]
   - [[Timing Exceptions]]
-    - [[False Paths]]
+    - [[False Paths in STA|False Paths]]
     - [[Multicycle Paths]]
     - [[Half cyle paths]]
-    - [[Delay Exceptions | set_max_delay,set_min_delay]]
+    - [[Delay in VLSI|Delay Exceptions | set_max_delay,set_min_delay]]
   - [[Operating Modes]]
     - [[Functional Mode]]
     - [[Test Mode | Test Mode, Scan, Shift, and Capture]]
-  - [[PVT Corners | Multi-Mode Multi-Corner Analysis]]
+  - [[PVT Corners]]
   - [[Hierarchical vs. Flat STA]]
   - [[DVFS | Dynamic Voltage and Frequency Scaling]]
   - [[SMVA|Simultaneous Multivoltage Analysis]]
   - [[Timing Violations]]
       - [[Setup|Setup Time]]
-      - [[Hold|Hold Time]]
-      - [[Recovery|Recovery Time]]
-      - [[Removal|Removal Time]]
-      - [[MPW|Minimum Pulse Width]]
+      - [[Hold Time]]
+      - [[Recovery]]
+      - [[Removal]]
+      - [[MPW]]
       - [[Min Period|Minimum Period]]
-      - [[DCD|Duty Cycle Degradation]]
+      - [[DCD in VLSI|DCD]]
       - [[Clock Gating Setup|Clock Gating Setup]]
       - [[Clock Gating Hold|Clock Gating Hold]]
       - [[Delay Exception|Max-Min Path Delay]]
       - [[Skew Checks|Maximum Skew]]
     - [[Timing Design Rule Violations]]
       - [[Transition|Transition Time]]
-      - [[Capacitance|Capacitance]]
+      - [[Capacitance in VLSI|Capacitance]]
       - [[Max Fanout|Max Fanout]]
     - [[Signal Integrity Analysis]]
       - [[Crosstalk Delay]]
-      - [[Noise|Crosstalk-Glitch-Noise]]
+      - [[Noise]]
       - [[SI Double Switching|SI Double Switching]]
-  - [[Delay Models]]
+      - [[SI Double Switching|SI Double Switching]]
+  - [[Delay Models in VLSI|Delay Models]]
     - [[NLDM | Non-Linear Delay Model]]
     - [[CCS | Composite Current Source]]
     - [[ECSM | Effective Current Source Model]]
 
 - **[[Variability Analysis]]**
   - [[BC-WC|Best-Case - Worst-Case Analysis]]
-  - [[OCV|On-Chip Variation, PVT Variation]]
+  - [[OCV]]
   - [[AOCV|Advanced OCV]]
   - [[POCV|Parametric OCV]]
   - [[CRPR Or CPPR|Clock Reconvergence Pessimism Removal]]
@@ -356,7 +365,7 @@ graph TD
   - [[Fixing Techniques]]
     - [[Cell Sizing]]
     - [[Buffer Insertion]]
-    - [[Clock Path ECO | Clock Skew Optimization, Clock Pushing and Pulling]]
+    - [[Clock Path ECO]]
     - [[Vt Swapping]]
     - [[Metal ECO | Wire Optimization]]
     - [[Frequency Optimization]]
@@ -368,14 +377,15 @@ graph TD
 
 - **[[Power Fundamentals]]**
   - [[Power Types]]
-    - [[Dynamic Power | Dynamic Power - Switching, Internal]]
+    - [[Dynamic Power in VLSI|Dynamic Power | Dynamic Power - Switching, Internal]]
     - [[Static Power | Static Power - Leakage]]
   - [[Power Metrics & Calculation]]
-    - [[Total Power | Total Power , Switching, Internal, Leakage]]
-    - [[Early Power Estimation]]
+    - [[Total Power]]
+    - [[Early Power Estimation in VLSI|Early Power Estimation]]
 - **[[Power Delivery Network (PDN)]]**
   - [[PDN Components]]
     - [[Power Grid | Power Grid, Straps, Vias, Decaps]]
+    - [[Power Straps]]
     - [[PCB Power Grid | Voltage Regulators, Supply Sets]]
 - **[[Power Integrity Analysis]]**
   - [[Resistance Limits]]
@@ -383,13 +393,13 @@ graph TD
     - [[Static IR Drop]]
     - [[Dynamic IR Drop | Dynamic IR Drop - Vectorless or VCD]]
     - [[DFT Power Signoff]]
-  - [[Electromigration | EM Analysis - Power, Signal]]
-  - [[Decap Planning]]
+  - [[Electromigration in VLSI|Electromigration | EM Analysis - Power, Signal]]
+  - [[Decap Planning in VLSI|Decap Planning]]
   - [[IR Drop Aware Timing Signoff]]
   - [[ESD Checks | ESD Checks - B2B, C2I]]
   - [[Package Modeling | Package or Board Modeling and Signoff]]
 - **[[Power Management Techniques]]**
-  - [[In-rush Current | In-rush Current, Wakeup Latency]]
+  - [[In-rush Current]]
   - [[Power Gating | Power Gating Switches, Control & Sequencing]]
   - [[State Retention]]
     - [[Retention Registers | Retention Registers, Partial or Full Retention]]
@@ -402,16 +412,16 @@ graph TD
   
 
 ### 7.3. [[Physical Verification]]
-- [[DRC | DRC - Design Rule Check]]
+- [[Design Rule Check (DRC)|DRC]]
 - [[LVS | LVS - Layout Versus Schematic]]
-- [[Antenna Effect]]
-- [[ERC | ERC - Electrical Rule Check]]
+- [[Antenna Effect in VLSI|Antenna Effect]]
+- [[Electrical Rule Check (ERC)|ERC]]
 - [[DFM | DFM - Design for Manufacturability]]
-- [[Density_Checks]]
+- [[Density Checks in VLSI|Density_Checks]]
 - [[Metal_Fill_verification]]
-- [[Double_Patterning_Check]]
-- [[ESD_Checks]]
-- [[PV_Tools | PV_Tools - Calibre, ICV, PVS]]
+- [[Double Patterning Check (DPC) in VLSI|Double_Patterning_Check]]
+- [[ESD Checks in VLSI|ESD_Checks]]
+- [[PV_Tools]]
 
 ### 7.4. [[ECO|ECO - Engineering Change Order]]
 - [[Functional ECO]]
@@ -429,15 +439,16 @@ graph TD
   - [[Intel]]
 - [[Mask Generation]]
 - [[Wafer Sort]]
+- [[Wafer Sort]]
 - [[Packaging]]
 
 ---
 ## 9. [[Post-Silicon Validation]]
 *Testing the manufactured chip in a lab environment.*
-- [[Bring-Up]]
+- [[Bring-Up in VLSI|Bring-Up]]
 - [[Characterization]]
 - [[Shmoo Plots]]
-- [[ATE | ATE - Automated Test Equipment]]
+- [[Automatic Test Equipment (ATE)|ATE]]
 - [[Failure Analysis | FA - Failure Analysis]]
 - [[Yield Analysis]]
 
@@ -506,8 +517,11 @@ graph TD
 |---|---|---|---|
 | **[[RTL Design]]** | VCS | Xcelium | Questa |
 | **[[Synthesis]]** | Fusion Compiler, Design Compiler | Genus | Tessent Synthesis |
-| **[[Functional Verification | Formal Verification (LEC)]]** | Formality | Conformal LEC | Tessent Formal |
+| **[[Formal Verification]]** | Formality | Conformal LEC | Tessent Formal |
 | **[[STA|Static Timing Analysis (STA)]]** | PrimeTime (PT) | Tempus | Tessent Shell with STA |
+| **[[CTS Tools|CTS]]** | PrimeTime (PT) | Tempus | Tessent Shell with STA |
+| **[[CTS Tools|CTS]]** | PrimeTime (PT) | Tempus | Tessent Shell with STA |
+| **[[CTS Tools|CTS]]** | PrimeTime (PT) | Tempus | Tessent Shell with STA |
 | **[[DFT|Design for Test (DFT)]]** | TestMAX | Modus | Tessent |
 | **[[Physical Design]]** | IC Compiler II (ICC2) | Innovus | Aprisa |
 | **[[SPEF|Parasitic Extraction]]** | StarRC | Quantus | Calibre xACT |
