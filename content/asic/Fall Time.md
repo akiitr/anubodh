@@ -1,32 +1,32 @@
 ---
-title: Rise Time
-description: Explanation of Rise Time in VLSI digital circuits.
+title: Fall Time
+description: Explanation of Fall Time in VLSI digital circuits.
 date: 2025-07-24
 tags: [ASIC, Timing, Signal Integrity]
-aliases: [Rise Time, Slew Rate]
+aliases: [Fall Time, Slew Rate]
 ---
 
-# Rise Time
+# Fall Time
 
 ## Simple Explanation (Gist)
-Rise time is the time it takes for a digital signal to transition from a low logic level (typically 10% of its final high voltage) to a high logic level (typically 90% of its final high voltage). It's a measure of how quickly a signal can switch states.
+Fall time is the time it takes for a digital signal to transition from a high logic level (typically 90% of its initial high voltage) to a low logic level (typically 10% of its final low voltage). It's a measure of how quickly a signal can switch states.
 
 ## Detailed Breakdown
 
-*   **Definition**: Rise time (`t_r`) is a critical parameter for digital signals, especially in high-speed VLSI circuits. It quantifies the duration of the signal's positive transition. Similarly, [[Fall Time]] (`t_f`) measures the time for a high-to-low transition.
+*   **Definition**: Fall time (`t_f`) is a critical parameter for digital signals, especially in high-speed VLSI circuits. It quantifies the duration of the signal's negative transition. Similarly, [[Rise Time]] (`t_r`) measures the time for a low-to-high transition.
 
-*   **Measurement**: Typically, rise time is measured between the 10% and 90% voltage levels of the signal swing. For example, if a signal swings from 0V to 1V, the rise time is the duration it takes to go from 0.1V to 0.9V.
+*   **Measurement**: Typically, fall time is measured between the 90% and 10% voltage levels of the signal swing. For example, if a signal swings from 1V to 0V, the fall time is the duration it takes to go from 0.9V to 0.1V.
 
 *   **Importance in VLSI Design**: 
-    1.  **Timing Accuracy**: Slower rise times (longer duration) mean that the signal takes more time to cross the switching threshold of the next logic gate. This directly contributes to the [[Propagation Delay]] of the gate and can lead to increased overall path delays, potentially causing [[Setup|setup time]] violations.
+    1.  **Timing Accuracy**: Slower fall times (longer duration) mean that the signal takes more time to cross the switching threshold of the next logic gate. This directly contributes to the [[Propagation Delay]] of the gate and can lead to increased overall path delays, potentially causing [[Setup|setup time]] or [[Hold Time|hold time]] violations.
     2.  **Power Consumption**: Slower transitions (both rise and fall) lead to increased [[Dynamic Power]] consumption. During the transition, both the PMOS and NMOS transistors in a CMOS gate might be simultaneously conducting for a longer period, creating a short-circuit current path from Vdd to Vss.
-    3.  **[[Signal Integrity]]**: Poor (slow) rise times can degrade [[Signal Integrity]]. Signals with slow edges are more susceptible to [[Noise]] and [[Crosstalk]], as they spend more time in the indeterminate region between logic 0 and 1. This can lead to false switching or oscillations.
+    3.  **[[Signal Integrity]]**: Poor (slow) fall times can degrade [[Signal Integrity]]. Signals with slow edges are more susceptible to [[Noise]] and [[Crosstalk]], as they spend more time in the indeterminate region between logic 0 and 1. This can lead to false switching or oscillations.
     4.  **Reliability**: Very slow transitions can cause reliability issues, especially in deep sub-micron technologies, by stressing transistors or causing hot-carrier effects.
     5.  **Design Rule Check (DRC)**: Most technology libraries and design rules specify maximum allowed rise and fall times (often referred to as maximum slew rates) for signals to ensure proper operation and manufacturability. Violations of these rules are flagged as [[Timing Design Rule Violations]].
 
-*   **Factors Affecting Rise Time**: 
-    *   **Drive Strength of the Driving Cell**: Stronger (larger) driving cells can charge the output load capacitance faster, resulting in faster rise times.
-    *   **Output Load Capacitance**: Higher load capacitance (due to fanout, interconnect length, or input capacitance of driven cells) requires more current to charge, leading to slower rise times.
+*   **Factors Affecting Fall Time**: 
+    *   **Drive Strength of the Driving Cell**: Stronger (larger) driving cells can discharge the output load capacitance faster, resulting in faster fall times.
+    *   **Output Load Capacitance**: Higher load capacitance (due to fanout, interconnect length, or input capacitance of driven cells) requires more current to discharge, leading to slower fall times.
     *   **Interconnect Resistance**: Resistance of the metal wires adds to the RC delay, slowing down transitions.
     *   **Input Slew**: The slew rate of the input signal to a gate also affects its output slew. A slow input slew can cause a slow output slew.
 

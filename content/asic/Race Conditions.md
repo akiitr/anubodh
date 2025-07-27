@@ -1,4 +1,3 @@
-
 ---
 title: Race Conditions
 description: Explanation of Race Conditions in VLSI digital circuits.

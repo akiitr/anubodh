@@ -24,6 +24,7 @@ Cell Sizing
 Characterization
 check_timing
 Chip Specification
+chip
 Clock Buffers and Inverters
 Clock Frequency
 Clock Gating
@@ -43,11 +44,18 @@ CPF
 CPU
 Crosstalk Delay
 Crosstalk
+CTS Tools
 CTS
 Data and clock Path
 Data Path Design
+DCD
 DDR
+Debugging
+Decap Planning
+Decaps
 DEF
+Delay Models
+Delay
 Density_Checks
 Detailed Routing
 DFM
@@ -57,17 +65,23 @@ Die Size Estimation
 Directed Testing
 Double_Patterning_Check
 DRC
+DRV Fixing
+Dynamic Power
 ECO
+Electromigration
 Emulation & Prototyping & FPGA
 ERC
-ESD_Checks
+ESD Checks
 Failure Analysis
+Fall Time
 False Paths
 Fault Models
+Finite State Machines (FSM)
 Floating Nets and Pins
 Floorplanning & Power Planning
 Flylines
 Formal Verification
+Foundry
 Frontend Interview Questions
 FSM
 Functional Coverage
@@ -78,19 +92,24 @@ Gate-Level Netlist
 GDSII or OASIS
 Global Routing
 GPU
+H-Tree
 Halo
 Handshake Protocol
+Hard Blockage
 HDL
 Hierarchical Synthesis
 High-Fanout Net Synthesis (HFNS)
 Hold
-H-Tree
+Hold Time
+I-O Specification
+In-rush Current
 Incremental Synthesis
 index
 Intel
 I-O Specification
 In-rush Current
 IP Integration
+IR Drop Aware Timing Signoff
 IR Drop
 Isolation Cells
 JTAG
@@ -115,6 +134,7 @@ Mask Generation
 Max Fanout
 MBIST
 Memory Hierarchy
+Metal Fill
 Metal_Fill_verification
 Metal-Only ECO
 Metastability
@@ -127,7 +147,10 @@ Multi-driven Nets
 Multi-voltage Design
 Multi-Vt Cells
 Multicycle Paths
+NDR
 Netlist Input
+Netlist
+NLDM
 Noise
 Open and Short Faults
 Operand Isolation
@@ -153,11 +176,20 @@ Power Mesh
 Power Rails
 Power Rings
 Power Signoff
+Power Straps
+Power Supply Noise
+Power Types
 PPA
 Pre-Placement & Sanity Checks
+PrimeTime
+Process Variation
+Propagation Delay
 PV_Tools
+PVT Corners
+Race Conditions
 Recommended Resources
 Recovery
+Register File
 Register Retiming
 Removal
 report_analysis_coverage
@@ -172,6 +204,10 @@ report_timing
 Reset Strategy
 Reset Synchronizer
 Retention Cells
+Retention Registers
+Rise Time
+Routing Layers
+Routing Optimizations
 Routing
 RTL Design
 Samsung
@@ -201,20 +237,27 @@ Synthesis
 Synthesizable vs Non-synthesizable constructs
 SystemVerilog
 Tape Out & Manufacturing
+Technology File
 Technology Mapping
-Testbench
-Test Techniques
+Tempus
 Test Coverage
+Test Techniques
+Testbench
 Timing ECO
+Timing Library
 Timing Paths
+Timing Window File
 Timing-Driven Routing
 Top-down Synthesis
+Total Power
 Transition Faults
 Transition
 TSMC
+Tweaker
 Unclocked Flops
 Unconstrained Endpoints
 UPF
+Useful Skew
 UVM Agent
 UVM Components
 UVM Driver

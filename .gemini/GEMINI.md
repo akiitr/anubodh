@@ -82,3 +82,7 @@ This document outlines specific instructions and best practices for the Gemini C
 *   **File Naming:** Use clear, descriptive file names for your Markdown files.
 *   **Drafts:** Utilize the `draft: true` frontmatter field for content that is not yet ready for publication.
 *   **Updates:** When updating existing content, ensure that the `date` in the frontmatter is updated if it reflects the last modification date, or rely on the `CreatedModifiedDate` plugin's default behavior.
+
+## Gemini Added Memories
+- The markdown files in the `content/asic/` directory are placeholders for VLSI Physical Design, Signoff Timing, and Power PDN Signoff topics. The content must be of the highest quality and accuracy due to the high-stakes nature of the field.
+- For each topic, use Wikilinks and Backlinks extensively to connect to other notes, and always include a 'Further Reading' section at the end with links to relevant books or URLs.

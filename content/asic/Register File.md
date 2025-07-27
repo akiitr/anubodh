@@ -1,4 +1,3 @@
-
 ---
 title: Register File
 description: Explanation of Register File in VLSI design.

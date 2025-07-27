@@ -1,9 +1,9 @@
 ---
-title: Setup
+title: Setup Time
 description: Explanation of Setup Time in Static Timing Analysis (STA).
 date: 2025-07-24
 tags: [ASIC, STA, Timing]
-aliases: [Setup Time]
+aliases: [Setup, Setup Time]
 ---
 
 # Setup Time
