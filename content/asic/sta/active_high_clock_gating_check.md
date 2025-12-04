@@ -39,6 +39,9 @@ The purpose of clock gating is to block clock pulses to save power while ensurin
 
 In summary, the transition of the enable signal must occur entirely within the inactive (low) phase of the clock pulse to guarantee the resulting gated clock is clean.
 
+> [!INFO] Related Note
+> See [[clock_gating_timing_checks|Clock Gating Timing Checks]] for a broader overview of timing integrity and glitch prevention mechanisms.
+
 ## Quiz Context
 > [!QUESTION] Active-High Clock Gating Check
 > **Question:** In a clock-gating check for an active-high gate (e.g., an AND gate where one input is the clock and the other is the enable), what is the fundamental requirement for the enable signal to prevent glitches on the gated clock?

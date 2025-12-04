@@ -48,3 +48,4 @@ This statistical approach leads to more accurate and reliable timing sign-off fo
 
 ## References
 *   **Source:** *Static Timing Analysis for Nanometer Designs* by Rakesh Chadha.
+*   **Related:** [[mmmc_dmsa_smva_analysis]]

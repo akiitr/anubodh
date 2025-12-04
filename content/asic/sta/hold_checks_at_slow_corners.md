@@ -53,3 +53,4 @@ Therefore, running hold checks at a base WCS corner (with appropriate derating f
 
 ## References
 *   **Source:** *Static Timing Analysis for Nanometer Designs* by Rakesh Chadha.
+*   **Related:** [[timing_derates_and_ocv]]

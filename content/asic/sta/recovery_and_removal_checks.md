@@ -54,3 +54,4 @@ The correct definition emphasizes the state transition:
 
 ## References
 *   **Source:** *Static Timing Analysis for Nanometer Designs* by Rakesh Chadha.
+*   **Related:** [[set_data_check_non_sequential]]

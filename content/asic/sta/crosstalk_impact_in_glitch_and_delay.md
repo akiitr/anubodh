@@ -53,3 +53,4 @@ Both types of analyses rely on accurate knowledge of the parasitic coupling capa
 
 ## References
 *   **Source:** *Static Timing Analysis for Nanometer Designs* by Rakesh Chadha.
+*   **Related:** [[crosstalk_delay_vs_noise]], [[reducing_si_pessimism_with_exclusion]]

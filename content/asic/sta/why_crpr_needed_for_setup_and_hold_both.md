@@ -66,3 +66,4 @@ You can think of the common clock path as a **single stretch of highway leading 
 
 ## References
 *   **Source:** *Static Timing Analysis for Nanometer Designs* by Rakesh Chadha.
+*   **Related:** [[timing_derates_and_ocv]]
