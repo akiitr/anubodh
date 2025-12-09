@@ -10,4 +10,6 @@ With hands-on experience across the entire ASIC design flow, I'm sharing practic
 
 <footer>
   Waiting for Computing Singularity...
+
+
 </footer>

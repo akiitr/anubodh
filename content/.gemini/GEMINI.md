@@ -12,7 +12,7 @@
 6.  **File Naming:** Use clear, descriptive file names for your Markdown files **`Use underscore (_) instead of spaces`** (snake_case preferred for filenames).
 
 # ALLOWED TAGS (Select max 3)
-[asic, finance, home, social, travel, youtube, web, career, health, ideas, research, learnings, shop, todo, tool, debug, docker, tutorial, cheatsheet, to_learn, in_progress, completed, projects, bug, AI, article, news, summary, family, recipes, goals, books, movies, music, quotes, budget, coding, security, meeting, productivity, VLSI, RTL_Design, Physical_Design, Static_Timing_Analysis]
+[asic, finance, home, social, travel, youtube, web, career, health, ideas, research, learnings, shop, todo, tool, debug, docker, tutorial, cheatsheet, to_learn, in_progress, completed, projects, bug, AI, article, news, summary, family, recipes, goals, books, movies, music, quotes, budget, coding, security, meeting, productivity, VLSI, RTL_Design, Physical_Design, STA, PDN, PV, FVCLP]
 
 # NOTE STRUCTURE & SYNTAX
 
